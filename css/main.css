@@ -1,0 +1,14 @@
+.Wrap {}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.inner.flx {
+    display: flex;
+}
+
+nav {
+    margin: 0 0 0 auto;
+}
