@@ -238,12 +238,35 @@ resposive 768
     }
 
     nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 90px);
+        height: 100vh;
+        background: #fff;
         margin: 0 0 0 auto;
+        z-index: 999;
+        padding: 150px 15px 0 15px;
+        transition: 0.5s;
+    }
+
+    nav.on {
+        left: 0;
     }
 
     nav>ul {
         display: flex;
-        gap: 40px;
+        flex-direction: column;
+        gap: 0;
+        line-height: 40px;
+    }
+
+    nav>ul>li {
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav>ul>li>a {
+        display: block;
     }
 
     .mopen {
@@ -253,7 +276,18 @@ resposive 768
         width: 30px;
         height: 30px;
         font-size: 0;
+        padding: 0 0;
         z-index: 999;
+    }
+
+    .mopen::before {
+        content: "O";
+        font-size: 20px;
+    }
+
+    .mopen.on::before {
+        content: "X";
+        font-size: 20px;
     }
 
     .main_visual {
